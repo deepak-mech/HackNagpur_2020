@@ -17,11 +17,11 @@ def speak(audio):
 
 def design1():
         os.system(" tput bold ")
-        print("=========================================================================================================================")
+        print("================================================================================================================================")
         os.system(" tput  setaf 1 ") 
-        print("\t\t----------------->Your welcome in this Basic Automation Menu Program<----------------\t\t")
+        print("\t\t\t ----------------->Your welcome in this Basic Automation Menu Program<----------------\t\t")
         os.system(" tput  setaf 3 ")
-        print("=========================================================================================================================\n")
+        print("=================================================================================================================================\n")
         os.system(" tput setaf 77 ")
 
 def design2():
@@ -29,9 +29,11 @@ def design2():
         print(" Basic Menu Program ")
         print(" ----------------------\n")
         os.system(" tput setaf 78 ")      
-        print(""" \t\t 1). Search Wikipedia \t\t 2). Open Youtube \t\t 3). Open Google \n
+        print(""" \t\t 1). Search Wikipedia \t\t 2). Open Youtube \t\t 3). Open Google Chrome \n
                  4). Open StackOverFlow \t 5). Play Music \t\t 6). Current Time \n
-                 7). Joke \n\n""")
+                 7). Tell me a Joke \t\t 8). WhatsApp Message \t\t 9). Open VS Code Editor \n
+                10). Open PyCharm Editor \t 11). Open Oracle Virtual Box \t 12). Open Team Viewer\n
+                13). Open Notepad Editor \t 14). Open Window Media Player \t 15). Show Network Configuration \n\n """)
                                    
 def takeCommand():
     r = sr.Recognizer()
@@ -46,7 +48,7 @@ def takeCommand():
         print(' Recognising....\n')
         speak("I got it, please wait.....")
         query = r.recognize_google(audio, language='en-in')
-        #print(query)
+        print(query)
 
     except Exception as e:
         print(e)
@@ -57,16 +59,12 @@ def takeCommand():
     return query
 
 while True: 
-        os.system('cls')  
+        os.system(" cls ")
         design1()
         design2()
         query = takeCommand().lower()
-
-        # Logic for executing tasks based on query
-        if 'how are you' in query:
-            speak('Sir, I am fine whats about you')
   
-        elif 'wikipedia' in query:
+        if 'wikipedia' in query:
             print('Searching on wikipedia....')
             query = query.replace('wikipedia', '') 
             results = wikipedia.summary(query, sentences = 1)
@@ -74,11 +72,11 @@ while True:
             print(results)
             speak(results)
 
-        elif 'open youtube' or 'play youtube'in query:
+        #elif 'open youtube' or 'play youtube'in query:
             speak(" playing youtube " )
             webbrowser.open('youtube.com')
 
-        elif 'open google' or "run google" in query:
+        #elif 'open google' or "run google" in query:
             speak(" opening google ")
             webbrowser.open('google.com')
 
@@ -103,7 +101,7 @@ while True:
 
         elif 'whatsapp message' in query:
             speak(" Sending WhatsApp message ")
-            pywhatkit.sendwhatmsg(' +917494904526 ', ' Sending whatsapp msg to tamanna through python with just two lines of code ',  00, 57) 
+            pywhatkit.sendwhatmsg(' +919034145074 ',  ' Hello, How are you ? ' , 19, 5 ) 
 
         elif 'open vs code' or 'play vs code' in query:
             speak(" Opening VS Code ")
@@ -140,7 +138,6 @@ while True:
         elif "network configuration" in query:
             speak(" Network Configurations are ")
             os.system("ipconfig")
-
 
         elif 'exit' in query:
             os.system(" tput setaf 2 ")
