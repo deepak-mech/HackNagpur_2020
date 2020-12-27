@@ -74,29 +74,29 @@ while True:
             print(results)
             speak(results)
 
-        #elif 'open youtube' or 'play youtube'in query:
+        elif 'open youtube' or 'play youtube'in query:
             speak(" playing youtube " )
             webbrowser.open('youtube.com')
 
-        #elif 'open google' or "run google" in query:
+        elif 'open google' or "run google" in query:
             speak(" opening google ")
             webbrowser.open('google.com')
 
-        #elif 'open stack overflow' or 'run stack overflow' in query:
+        elif 'open stack overflow' or 'run stack overflow' in query:
             speak(" running stack overflow ")
             webbrowser.open('stackoverflow.com')
 
-        #elif 'play song' in query:
+        elif 'play song' in query:
             song = query.replace(" play song ",  ' ' )
             speak(" Playing " + song )
             pywhatkit.playonyt(song)
 
-        #elif 'time' in query:
+        elif 'time' in query:
             time = datetime.datetime.now().strftime(" %I:%M %p ")
             print(time, "\n")
             speak(" Current time is " + time )
 
-        #elif 'joke' in query:
+        elif 'joke' in query:
             joke = pyjokes.get_joke()
             print(joke, "\n")
             speak(joke)
@@ -140,19 +140,6 @@ while True:
         elif "network configuration" in query:
             speak(" Network Configurations are ")
             os.system("ipconfig")
-
-        elif 'email to deepak' in query:
-            # To send the email you must have to turn on less secure apps ON first in your gogle account.
-            try:
-                speak('What should I say?')
-                content = takeCommand()
-                to = 'mrdeepakshah3076@gmail.com'
-                sendEmail(to, content)
-                speak('Email has been sent!')
-
-            except Exception as e:
-                print(e)
-                speak('Sorry sir, I am not able to send the email at this moment')
 
 
         elif 'exit' in query:
