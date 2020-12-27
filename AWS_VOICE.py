@@ -24,6 +24,7 @@ while True:
     ch = r.recognize_google(audio)
     print(ch)
     ch = ch.lower()
+    
 # Here i am giving command to create key pair
 
     if(("make" in ch) or ("create" in ch) and ("key pair" in ch)):
@@ -38,6 +39,7 @@ while True:
 
 
 # security grp
+
     elif(("create" in ch) and ("security group" in ch)):
         pyttsx3.speak("Enter the name of security group:  ")
         groupname = input("Enter the name of security group:  ")
@@ -52,6 +54,7 @@ while True:
         input("Press enter to continue")
 
 # ec2 instance launch
+
     elif(("create " in ch) or ("launch" in ch ) and ("ec2 instance" in ch) or ("new instance" in ch) or ("e c 2 instance" in ch)):
         pyttsx3.speak("Enter the image id ")
         imageid = input("Enter the image id: ")
@@ -74,7 +77,8 @@ while True:
         pyttsx3.speak("I created a new instance for you")
         input("Press enter to continue")
 
-        # ebs volume 
+ # create ebs volume 
+        
     elif(("create" in ch) and ("ebs volume" in ch)):
         pyttsx3.speak("Enter the availability zone you want to launch the ebs volume in")
         avail_zone = input(
@@ -86,7 +90,9 @@ while True:
             "https://ap-south-1.console.aws.amazon.com/ec2/v2/home?region=ap-south-1#Volumes:sort=desc:createTime")
         pyttsx3.speak("I created an ebs volume for you")
         input("Press enter to continue")
-        # instance start
+        
+ # instance start
+        
     elif(("start" in ch) and ("instance" in ch)):
         pyttsx3.speak("Enter the id of instance which you want to start:  ")
         instance_id = input(
@@ -96,7 +102,9 @@ while True:
             "https://ap-south-1.console.aws.amazon.com/ec2/v2/home?region=ap-south-1#Instances:")
         pyttsx3.speak("I started the instance for you")
         input("Press enter to continue")
+        
 #  instance stop
+
     elif(("stop" in ch) and ("instance" in ch)):
         pyttsx3.speak("Enter the id of instance which you want to stop:  ")
         instance_id = input(
@@ -106,7 +114,9 @@ while True:
             "https://ap-south-1.console.aws.amazon.com/ec2/v2/home?region=ap-south-1#Instances:")
         pyttsx3.speak("I stopped the instance for you")
         input("Press enter to continue")
+        
 #  instance terminate
+
     elif(("terminate" in ch) and ("instance" in ch)):
         pyttsx3.speak("Enter the id of instance which you want to terminate:  ")
         instance_id = input(
@@ -117,6 +127,9 @@ while True:
             "https://ap-south-1.console.aws.amazon.com/ec2/v2/home?region=ap-south-1#Instances:")
         pyttsx3.speak("I terminated the instance for you")
         input("Press enter to continue")
+        
+  # attach ebs volume
+        
     elif(("attach ebs volume" in ch) and ("instance" in ch)):
         pyttsx3.speak("Enter the id of instance to which you want to attach an ebs volume:  ")
         instance_id = input(
@@ -130,6 +143,9 @@ while True:
             "https://ap-south-1.console.aws.amazon.com/ec2/v2/home?region=ap-south-1#Instances:")
         pyttsx3.speak("The ebs volume has been attached to the instance")
         input("Press enter to continue")
+        
+  # detach ebs volume
+        
     elif(("detach ebs volume" in ch) and ("" in ch)):
         pyttsx3.speak("Enter the id of the volume that you want to detach:  ")
         volume_id = input(
@@ -140,6 +156,9 @@ while True:
         pyttsx3.speak(
             "The ebs volume has been detached from the instances that it was attached to")
         input("Press enter to continue")
+        
+  # create s3 bucket      
+        
     elif("create s3 bucket" in ch):
         pyttsx3.speak("Enter the name you want to give to the new s3 bucket")
         name = input("Enter the name you want to give to the new s3 bucket")
