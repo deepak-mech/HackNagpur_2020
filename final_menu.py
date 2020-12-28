@@ -113,7 +113,11 @@ while True:
             os.system(" python docker_conf_menu.py ")
             os.system(" cls ")
             os.system(" python docker_cmd_menu.py ")
-            os.system(" cls ")        
+            os.system(" cls ")    
+		
+	elif "AWS menu" in query:
+	    os.system(" python AWS_VOICE.py ")
+    	    os.system(" cls ")
  
         elif 'exit' in query:
             print('Thankyou sir for using my services.')
