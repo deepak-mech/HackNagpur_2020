@@ -4,26 +4,63 @@ import pyttsx3
 import os
 
 pyttsx3.speak("Hello")
-print()
-print("WELCOME TO THE WORLD OF AUTOMATION".center(125))
-pyttsx3.speak("WELCOME TO THE WORLD OF AUTOMATION".center(125))
-pyttsx3.speak("Here I am going to automate AWS services for you ......")
-pyttsx3.speak("How can i help you...?")
 
+def design1():
+        os.system(" cls ")
+        os.system(" tput bold ")
+        print("=============================================================================================================================================================")
+        os.system(" tput  setaf 1 ") 
+        print("\t\t\t\t----------------->Your welcome in this AWS Automation Menu Program<----------------\t\t")
+        pyttsx3.speak("Your welcome in this AWS Automation Menu Program")
+        os.system(" tput  setaf 3 ")
+        print("=============================================================================================================================================================\n")
+        os.system(" tput setaf 77 ")
+
+def design2():
+        os.system(" tput setaf 68 ")
+        print("AWS SERVICES ")
+        print(" ------------------------------------------------\n")
+        os.system(" tput setaf 78 ") 
+
+def aws():
+	print("""
+	\t--------> Create Key Pair
+	\t--------> Create Security Group
+	\t--------> Launch EC2 Instance
+	\t--------> Start EC2 Instance 
+	\t--------> Stop EC2 Instance
+	\t--------> Terminate EC2 Instance
+	\t--------> Create EBS Volume
+	\t--------> Attach EBS Volume
+	\t--------> Detach EBS Volume 
+	\t--------> Create S3 Bucket
+
+	""")
+design1()
+design2()
+aws()
+pyttsx3.speak("Tell me your requirements...........I 'm listening to you ")
 
 while True:
-    print()
-
+    design2()
+    aws()
     r = sr.Recognizer()
 
     with sr.Microphone() as source:
         
         audio = r.listen(source)
         pyttsx3.speak('i got it... please wait..!!')
-
-    ch = r.recognize_google(audio)
-    print(ch)
-    ch = ch.lower()
+    try:
+        ch = r.recognize_google(audio)
+        # print(ch)
+        ch = ch.lower()
+        
+    except Exception as e:
+        print(e)
+        print('Say that again please...\n')
+        pyttsx3.speak('Say that again please...')
+        
+       
     
 # Here i am giving command to create key pair
 
@@ -55,7 +92,7 @@ while True:
 
 # ec2 instance launch
 
-    elif(("create " in ch) or ("launch" in ch ) and ("ec2 instance" in ch) or ("new instance" in ch) or ("e c 2 instance" in ch)):
+    elif ("launch ec2 instance" in ch):
         pyttsx3.speak("Enter the image id ")
         imageid = input("Enter the image id: ")
         pyttsx3.speak("Enter the instance type you want to have: ")
@@ -79,7 +116,7 @@ while True:
 
  # create ebs volume 
         
-    elif(("create" in ch) and ("ebs volume" in ch)):
+    elif (("create" in ch) and ("ebs " in ch) or (" volume" in ch ) or (" e b s  volume " in ch )):
         pyttsx3.speak("Enter the availability zone you want to launch the ebs volume in")
         avail_zone = input(
             "Enter the availability zone you want to launch the ebs volume in")
@@ -166,4 +203,9 @@ while True:
         wb.open("https://s3.console.aws.amazon.com/s3/home?region=ap-south-1#")
         pyttsx3.speak("S3 bucket has been created")
         input("Press enter to continue")
+    pyttsx3.speak("Press Enter to continue")
+    input("Press enter to continue ")
+    
+    
     pyttsx3.speak("Tell me ur next requirement")
+
