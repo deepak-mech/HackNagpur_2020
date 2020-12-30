@@ -1,0 +1,76 @@
+--------------------
+Date: 26:12:2020
+Time: 0:37
+Phone number:  +919205308465 
+Message:  Sending whatsapp msg through python with just two lines of code 
+--------------------
+Date: 26:12:2020
+Time: 0:40
+Phone number:  +919205308465 
+Message:  Sending whatsapp msg through python with just two lines of code 
+--------------------
+Date: 26:12:2020
+Time: 0:44
+Phone number:  +919205308465 
+Message:  Sending whatsapp msg through python with just two lines of code 
+--------------------
+Date: 26:12:2020
+Time: 0:44
+Phone number:  +919205308465 
+Message:  Sending whatsapp msg through python with just two lines of code 
+--------------------
+Date: 26:12:2020
+Time: 0:49
+Phone number:  +919205308465 
+Message:  Sending whatsapp msg through python with just two lines of code 
+--------------------
+Date: 26:12:2020
+Time: 0:57
+Phone number:  +917494904526 
+Message:  Sending whatsapp msg to tamanna through python with just two lines of code 
+--------------------
+Date: 27:12:2020
+Time: 19:5
+Phone number:  +918307828436 
+Message:  Hello, How are you ? 
+--------------------
+Date: 27:12:2020
+Time: 17:29
+Phone number:  +918307828436 
+Message:  Hello, How are you ? 
+--------------------
+Date: 27:12:2020
+Time: 17:30
+Phone number:  +918307828436 
+Message:  Hello, How are you ? 
+--------------------
+Date: 28:12:2020
+Time: 19:5
+Phone number:  +919034145074 
+Message:  Hello, How are you ? 
+--------------------
+Date: 29:12:2020
+Time: 22:44
+Phone number:  +919034145074 
+Message:  Hello, How are you ? 
+--------------------
+Date: 29:12:2020
+Time: 23:10
+Phone number:  +919034145074 
+Message:  Hello, How are you ? 
+--------------------
+Date: 29:12:2020
+Time: 23:14
+Phone number:  +919034145074 
+Message:  Hello, How are you ? 
+--------------------
+Date: 29:12:2020
+Time: 23:22
+Phone number:  +919034145074 
+Message:  Hello, How are you ? 
+--------------------
+Date: 30:12:2020
+Time: 10:27
+Phone number:  +919034145074 
+Message:  Hello, How are you ? 
+--------------------
